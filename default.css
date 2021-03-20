@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --teeny-tawny: #d65108;
+  --tenne-tawny-dark: #b54507;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+ 
+}
+.title {
+  
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Unna', serif;
+  text-align: center;
+  color:var(--teeny-tawny);
+  margin-top: 0rem;
+}
+blockquote{
+  font-style: italic;
+  color:black;  
+}
+h4 {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.7rem 0;
+}
+h7{
+  position: absolute;
+  margin: -5rem 0;
+  font-weight: 700;
+}
+
+h8{
+  font-size: 1.6rem;
+  font-weight: 700;
+  color:var(--teeny-tawny);
+}
+
+p {
+    text-align: left;
+    margin: 0.5rem 0;
+}
+.meal-search cite {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.meal-wrapper {
+  padding: 2rem;
+  text-align: center;
+}
+.meal-search-box {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  margin: 1.2rem 0;
+}
+.search-control,
+.search-btn {
+  width: 100%;
+}
+#search-btn {
+  border: none;
+  width: 55px;
+  height: 55px;
+  background-color: var(--teeny-tawny);
+  color: white;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  transition: all 0.4s linear;
+}
+.search-control {
+  border: 1px solid #b54507;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+ 
+}
+.search-control::placeholder {
+  color: #d65108;
+}
+.search-control:focus {
+  border: 2px solid #b54507;
+  outline: none;
+}
+
+#search-btn:hover {
+  background-color: var(--tenne-tawny-dark);
+}
+.meal-result {
+  margin-top: 4rem;
+}
+.meal-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 21px -12px black;
+  margin: 1rem;
+  width: 25rem;
+}
+.meal-img img {
+  width: 100%;
+  display: block;
+}
+.meal-name {
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Get-recipe-btn {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 2rem;
+  margin: 10px;
+  padding: 0.4rem 1rem;
+  background-color: #d65108;
+}
+.Get-recipe-btn:hover {
+  background-color: #b54507;
+}
+.Get-recipe-btn:active {
+  background-color: #8f3606;
+}
+.Get-recipe-btn:focus {
+  border: 2px solid #2a2a2a;
+  outline: none;
+}
+#meal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 8rem;
+
+}
+
+.meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d65108;
+  color: white;
+  overflow-y: auto;
+  /* padding: 2rem 16px; */
+  max-width: 50rem;
+  max-height: 30rem;
+  backdrop-filter: blur(10px);
+}
+
+.showrecipe {
+  display: block;
+}
+
+.meal-details::-webkit-scrollbar {
+    width: 10px;
+  }
+.meal-details::-webkit-scrollbar-thumb {
+    background-color: #8f3606;
+    border-radius: 1rem;
+  }
+
+.recipe-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.8rem;
+}
+.meal-details-content {
+  height:200%;
+}
+
+/* .meal-details-content p:not(.recipe-category){
+  padding: 1rem 0;
+} */
+.recipe-meal-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.recipe-link{
+  margin: 1.4rem 0;
+}
+.recipe-link a{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.recipe-link a:hover{
+  opacity: 0.9;
+}
+
+.btn {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.btn-primary {
+  color: var(--teeny-tawny);
+  background-color: white;
+}
+
+.recipe-modal-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  width: 35px;
+  height:35px;
+  border-radius: 50%;
+}
+
+.recipe-category{
+  background-color: white;
+  color: #d65108;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.rounded-full {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.rounded-3xl {
+  border-radius: 0.5rem;
+}
+
+.recipe-instruct h5 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+.recipe-instruct p {
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.recipe-instruct{
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}
+
